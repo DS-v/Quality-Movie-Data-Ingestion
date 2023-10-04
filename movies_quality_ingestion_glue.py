@@ -74,7 +74,7 @@ EvaluateDataQuality_node1693060710028_ruleset = """
         IsComplete "genre",
         ColumnLength "genre" between 4 and 30,
         IsComplete "imdb_rating",
-        ColumnValues "imdb_rating" between 6.6 and 8,
+        ColumnValues "imdb_rating" between 7 and 10,
         IsComplete "overview",
         ColumnLength "overview" between 39 and 314,
         Completeness "meta_score" >= 0.82,
