@@ -6,4 +6,9 @@ Movies related data needs to be ingested in a efficient and widely used Data War
 
 ## Design
 
-![quality_movie_data drawio](https://github.com/DS-v/Quality-Movie-Data-Ingestion/assets/59478620/9285ec61-ebca-4793-a5fc-c4267fc976a9)
+![quality_movie_data drawio (1)](https://github.com/DS-v/Quality-Movie-Data-Ingestion/assets/59478620/4cf55e27-efd0-4813-b9f7-8b84c1b6f987)
+
+
+## Figuring out Data Quality Rules
+
+
