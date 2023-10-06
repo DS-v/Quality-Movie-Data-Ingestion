@@ -20,7 +20,10 @@ Business needs only movies with IMDB rating >= 7 to be stored in warehouse. That
 
 A total of 685 out of 1000 records passed the data quality checks.
 The failed records have been attached above along with sql queries used for analysis.
+
+
 => None of the records failed business criteria of IMDB rating > 7.
+
 => No of rules failing with respect to no of entries is as follows:
 
 ![image](https://github.com/DS-v/Quality-Movie-Data-Ingestion/assets/59478620/dab354e4-0d40-466e-a53b-88356e8de2b9)
@@ -41,5 +44,6 @@ Value of "certificate" column is typically in ["U","A","UA","R","PG-13","PG"], h
 ## Next Steps:
 
 The pipeline can be automated using triggers, cloudwatch events and lambda functions, so that as soon as new data arrives in s3 bucket, it's crawled and glue job starts it's execution for the increemental load.
+
 A dashboard can be built on athena table for bad data, which will be updated in real time to report results.
 
