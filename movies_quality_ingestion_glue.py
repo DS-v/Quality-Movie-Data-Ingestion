@@ -80,7 +80,7 @@ EvaluateDataQuality_node1693060710028_ruleset = """
         Completeness "meta_score" >= 0.82,
         ColumnValues "meta_score" in ["76","90","84","85","86","80","72","73","81","77","82","83","88","78","74","79","75","87","68","94","91","96","71","66","70","69","65","89","93","67","92","64","97","100","95","62","61"] with threshold >= 0.89,
         StandardDeviation "meta_score" between 11.75 and 12.99,
-        ColumnValues "meta_score" between 27 and 101,
+        ColumnValues "meta_score" between 27 and 100,
         IsComplete "director",
         ColumnLength "director" between 6 and 33,
         IsComplete "star1",
