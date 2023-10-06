@@ -1,0 +1,14 @@
+-- bad data records
+SELECT * FROM "AwsDataCatalog"."imdb-rating"."bad_records";
+
+-- number of entries failing quality check results
+select count(*) FROM "AwsDataCatalog"."imdb-rating"."bad_records";
+
+-- Analyse no of rules failed for how many entries
+select cardinality(dataqualityrulesfail) as Rules_failed,count(*) as no_of_entries from "AwsDataCatalog"."imdb-rating"."bad_records" group by cardinality(dataqualityrulesfail) order by cardinality(dataqualityrulesfail);
+
+-- Find how much a data quality rules fails in total
+select data_qualityfail,count(*) from (select series_title, data_qualityfail from "AwsDataCatalog"."imdb-rating"."bad_records" cross join unnest(dataqualityrulesfail) t(data_qualityfail)) group by data_qualityfail order by count(*) desc;
+
+-- records which failed business need criteria
+select series_title,imdb_rating from "AwsDataCatalog"."imdb-rating"."bad_records" where imdb_rating <= 7;
