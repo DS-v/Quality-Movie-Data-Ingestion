@@ -11,4 +11,5 @@ Movies related data needs to be ingested in a efficient and widely used Data War
 
 ## Figuring out Data Quality Rules
 
-
+Ruke recommendations of AWS Glue Data Quality service serve as a good starting point for data quality checks. However one needs to build on those rules and alter them based on input from business team. Most of the rules regarding the complete dataset on completeness, uniqueness, standard deviation of column values were kept as is. Rules regarding values of individual columns were tinkered with. These involve discarding entries with empty entries and making sure values lie in a logical range/set.
+Business needs only movies with IMDB rating >= 7 to be stored in warehouse. That change is also added to rules set. Read the text file for completre set of rules.
