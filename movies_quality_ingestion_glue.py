@@ -53,6 +53,7 @@ S3bucket_node1 = glueContext.create_dynamic_frame.from_catalog(
 
 # Script generated for node Evaluate Data Quality
 EvaluateDataQuality_node1695880460926_ruleset = """
+    # Example rules: Completeness "colA" between 0.4 and 0.8, ColumnCount > 10
      Rules = [
               RowCount between 500 and 2000,
             IsComplete "poster_link",
@@ -75,7 +76,7 @@ EvaluateDataQuality_node1695880460926_ruleset = """
             ColumnValues "imdb_rating" between 7 and 10,
             IsComplete "overview",
             ColumnLength "overview" between 39 and 314,
-            Completeness "meta_score" >= 0.82,
+            IsComplete "Meta_score",
             StandardDeviation "meta_score" between 11.75 and 12.99,
             ColumnValues "meta_score" between 27 and 101,
             IsComplete "director",
@@ -85,7 +86,6 @@ EvaluateDataQuality_node1695880460926_ruleset = """
             IsComplete "star2",
             ColumnLength "star2" between 3 and 26,
             IsComplete "star3",
-            Uniqueness "star3" > 0.6,
             ColumnLength "star3" between 3 and 28,
             IsComplete "star4",
             ColumnLength "star4" between 3 and 28,
